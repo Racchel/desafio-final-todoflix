@@ -6,9 +6,9 @@
       "description": "Nas florestas do estado de Washington, um pai cria seus seis filhos longe da civilização, em uma rígida rotina de aventuras. Ele é forçado a deixar o isolamento e leva sua família para encarar o mundo, desafiando sua ideia do que significa ser pai.",
       "image": "capitao-fantastico.png",
       "likes": 4,
-      "foiFavoritado": false,
-      "foiAssistido": false,
-      "foiInserido": false
+      "isFavorite": false,
+      "isWatched": false,
+      "isAdded": false
     },
     {
       "id": 1,
@@ -16,9 +16,9 @@
       "description": "Para resgatar uma princesa das garras de um dragão que cospe fogo, o ogro Shrek se une a um companheiro improvável: um burro brincalhão.",
       "image": "sherek.png",
       "likes": 5,
-      "foiFavoritado": false,
-      "foiAssistido": true,
-      "foiInserido": true
+      "isFavorite": false,
+      "isWatched": true,
+      "isAdded": true
     },
     {
       "id": 2,
@@ -26,9 +26,9 @@
       "description": "Um novo colega de sala transforma a vida do estudante Leonardo, que também é cego, e complica sua amizade com sua melhor amiga.",
       "image": "hoje-eu-quero-voltar-sozinho.png",
       "likes": 0,
-      "foiFavoritado": true,
-      "foiAssistido": false,
-      "foiInserido": true
+      "isFavorite": true,
+      "isWatched": false,
+      "isAdded": true
     },
     {
       "id": 3,
@@ -36,9 +36,9 @@
       "description": "Após ser picado por uma aranha radioativa, o garoto Miles Morales logo aprende a lançar teias com seus parceiros de um universo alternativo.",
       "image": "spider-man",
       "likes": 3,
-      "foiFavoritado": true,
-      "foiAssistido": true,
-      "foiInserido": true
+      "isFavorite": true,
+      "isWatched": true,
+      "isAdded": true
     },
     {
       "id": 4,
@@ -46,9 +46,9 @@
       "description": "Condenado pelo assassinato da esposa e do amante dela, um banqueiro se apega à esperança e à amizade com um detento chamado Red para sobreviver à prisão.",
       "image": "um-sonho-de-liberdade.png",
       "likes": 4.5,
-      "foiFavoritado": false,
-      "foiAssistido": true,
-      "foiInserido": true
+      "isFavorite": false,
+      "isWatched": true,
+      "isAdded": true
     },
     {
       "id": 5,
@@ -56,9 +56,9 @@
       "description": "Val é a fiel empregada domestica de uma família rica. Mas a chegada de sua filha gera tensão na casa e faz com que ela comece a questionar esse papel.",
       "image": "que-horas-ela-volta.png",
       "likes": 0,
-      "foiFavoritado": false,
-      "foiAssistido": false,
-      "foiInserido": true
+      "isFavorite": false,
+      "isWatched": false,
+      "isAdded": true
     },
     {
       "id": 6,
@@ -66,9 +66,9 @@
       "description": "O galo Rocky e a galinha Ginger querem ajudar todas as outras galinhas a fugirem da granja onde vivem em cativeiro.",
       "image": "a-fuga-das-galinhas.png",
       "likes": 2,
-      "foiFavoritado": false,
-      "foiAssistido": true,
-      "foiInserido": true
+      "isFavorite": false,
+      "isWatched": true,
+      "isAdded": true
     },
     {
       "id": 7,
@@ -76,9 +76,9 @@
       "description": "Nos bastidores do show no Theatro Municipal de São Paulo, o rapper e ativista Emicida celebra o grande legado da cultura negra brasileira.",
       "image": "amarelo.png",
       "likes": 5,
-      "foiFavoritado": true,
-      "foiAssistido": true,
-      "foiInserido": true
+      "isFavorite": true,
+      "isWatched": true,
+      "isAdded": true
     },
     {
       "id": 8,
@@ -86,9 +86,9 @@
       "description": "Em reabilitação, Elton John relembra suas origens humildes, as músicas atemporais e os momentos de inspiração e excesso. Baseado em sua verdadeira história.",
       "image": "rocketman.png",
       "likes": 0,
-      "foiFavoritado": false,
-      "foiAssistido": false,
-      "foiInserido": true
+      "isFavorite": false,
+      "isWatched": false,
+      "isAdded": true
     }
   ]
 }

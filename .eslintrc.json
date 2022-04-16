@@ -7,8 +7,6 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "parser": "@babel/eslint-parser",
-  "requireConfigFile": false,
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": false,

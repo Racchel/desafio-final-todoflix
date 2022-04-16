@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 /** layouts */
+import { BaseLayout } from '../shared/layouts'
 
 /** services */
 import { MoviesService } from '../shared/services/movies'
@@ -21,9 +22,7 @@ export const Home = () => {
   }, [])
 
   return (
-    <>
-      <h1>Página inicial</h1>
-
+    <BaseLayout title='Página inicial'>
       <ul>
         {
           movies.map(movie => (
@@ -31,7 +30,7 @@ export const Home = () => {
           ))
         }
       </ul>
-    </>
+    </BaseLayout>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 /** layouts */
+import { BaseLayout } from '../shared/layouts'
 
 /** services */
 import { MoviesService } from '../shared/services/movies'
@@ -19,7 +20,6 @@ export class Home extends Component {
 
   getMovies = async () => {
     const movies = await MoviesService.getAll()
-    // await MoviesService.toggleFavorite({ id: 0 })
 
     this.setState({
       listMovies: movies
@@ -29,8 +29,7 @@ export class Home extends Component {
 
   render() {
     return (
-      <>
-        <h1>Página inicial</h1>
+      <BaseLayout title='Página inicial'>
 
         <ul>
           {
@@ -39,7 +38,7 @@ export class Home extends Component {
             ))
           }
         </ul>
-      </>
+      </BaseLayout>
     )
   }
 }

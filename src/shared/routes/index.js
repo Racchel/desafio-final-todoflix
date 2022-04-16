@@ -5,27 +5,27 @@ import { Home } from '../../pages'
 export const routes = [
 
   {
-    title: 'Página inicial',
+    title: 'Início',
     path: '/',
     element: <Home />
   },
   {
-    title: 'Todos os filmes',
+    title: 'Todos',
     path: '/movies/all',
     element: <p>Todos os filmes</p>
   },
   {
-    title: 'Filmes favoritos',
+    title: 'Favoritos',
     path: '/movies/favorites',
     element: <p>Filmes favoritos</p>
   },
   {
-    title: 'Filmes asssistidos',
+    title: 'Já vistos',
     path: '/movies/watched',
     element: <p>Filmes asssistidos</p>
   },
   {
-    title: 'Filmes adicionados',
+    title: 'Adicionados',
     path: '/movies/added',
     element: <p>Filmes adicionados</p>
   }

@@ -1,8 +1,14 @@
+/** react */
+import { BrowserRouter } from 'react-router-dom'
+
+/** routes */
+import { AppRoutes } from './routes'
+
 const App = () => {
   return (
-    <>
-      <h1>Oii</h1>
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 

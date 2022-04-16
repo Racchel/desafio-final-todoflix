@@ -2,7 +2,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 /** routes */
-import { routes } from './routes'
+import { routes } from '../shared/routes'
 
 export const AppRoutes = () => {
   return (

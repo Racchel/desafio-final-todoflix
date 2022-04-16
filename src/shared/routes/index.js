@@ -1,5 +1,5 @@
 /** pages */
-import { Home } from '../pages'
+import { Home } from '../../pages'
 
 /** routes */
 export const routes = [

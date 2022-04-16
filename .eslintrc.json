@@ -7,12 +7,20 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "parser": "@babel/eslint-parser",
+  "requireConfigFile": false,
   "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaVersion": 2018,
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "plugins": [
     "react"

@@ -6,9 +6,8 @@ export const colors = {
     lg: '#2C2C2C',
     xl: '#000000'
   },
-  primary: {
-    default: '#E71B27'
-  },
+  primary: '#E71B27'
+  ,
   level: {
     v1: '#E71B27',
     v2: '#E08D1B',

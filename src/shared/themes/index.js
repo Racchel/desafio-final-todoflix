@@ -1,8 +1,7 @@
 import { font } from './fonts'
-import { sizes } from './sizes'
 import { colors } from './colors'
+import { bk } from './breakpoints'
 import { GlobalStyle } from './globalStyle'
-import { useBreakpoints } from './breakpoints'
 
 /**
  * xs = eXtremely small
@@ -14,9 +13,8 @@ import { useBreakpoints } from './breakpoints'
  * default = unique
  */
 export const Theme = {
+  bk,
   font,
-  sizes,
   colors,
-  GlobalStyle,
-  useBreakpoints
+  GlobalStyle
 }

@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 /** imgs */
 import logo from '../../assets/logo.png'
 import user from '../../assets/icons/user.svg'
-import search from '../../assets/icons/search.svg'
 import arrowDropdown from '../../assets/icons/arrow-dropdown.svg'
 
 /** imgs */
@@ -12,7 +11,6 @@ import { routes } from '../../routes'
 
 /** theme */
 import { Theme } from '../../themes'
-import { useState } from 'react'
 
 /** styled */
 const Container = styled.header`
@@ -24,7 +22,7 @@ const Container = styled.header`
   width: 100%;
   height: 74px;
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 10px;
 
   @media (max-width: ${Theme.bk.lg}) {
     grid-template-areas: 'LinkMenu LinkLogo User' 'Search Search Search';
@@ -63,6 +61,48 @@ const LinkHome = styled(Link)`
     display: none;
   }
 `
+/** SelectMenu */
+const SelectMenu = styled.select`
+  background-color: ${Theme.colors.neutral.xl};
+  color: ${Theme.colors.neutral.xs};
+  grid-area: LinkMenu;
+  display: block;
+  border: none;
+  ${height};
+  ${flex};
+
+  box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+
+  :focus, :hover, :active {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+  }
+
+  @media (max-width: ${Theme.bk.lg}) {
+    display: none;
+  }
+`
+
+const OptionMenu = styled.option``
+
+const MenuMobile = styled.p`
+  grid-area: LinkMenu;
+  display: none;
+  color: white;
+  ${height};
+  ${flex};
+
+  @media (max-width: ${Theme.bk.lg}) {
+    display: block;
+  }
+`
+
+// const LinkMenu = styled(Link)`
+//   color: ${Theme.colors.neutral.xs};
+// `
 
 /** Vazio */
 const Vazio = styled.div`
@@ -73,54 +113,6 @@ const Vazio = styled.div`
     display: none;
   }
 `
-/** LinkMenu */
-const DropDown = styled.nav`
-  color: ${Theme.colors.neutral.xs};
-  grid-area: LinkMenu;
-  display: block;
-  border: none;
-  ${height};
-  ${flex};
-  flex-direction: column;
-  position: relative;
-  
-  @media (max-width: ${Theme.bk.lg}) {
-    align-items: start;
-  }
-`
-
-const ListDropDown = styled.ul`
-  display: ${props => props.isOpenned ? 'block' : 'none'};
-  position: absolute;
-  width: 150px;
-  top: 30px;
-  left: 0;
-  padding: 10px 0;
-  background-color: ${Theme.colors.neutral.xl};
-`
-
-const ItemListDropDown = styled.li`
-  flex-direction: column;
-  padding: 3px;
-
-  :hover {
-    background-color: ${Theme.colors.primary};
-  }
-`
-
-const LinkDropDown = styled(Link)`
-  color: ${Theme.colors.neutral.xs};
-  font-size: ${Theme.font.size.xs};
-`
-
-const ButtonDropDown = styled.button`
-  color: ${Theme.colors.neutral.xs};
-  background-color: transparent;
-  border: none;
-  ${flex};
-`
-
-const IconDropDown = styled.img``
 
 /** NewMovieButton */
 const NewMovieButton = styled.button`
@@ -138,30 +130,14 @@ const NewMovieButton = styled.button`
 `
 
 /** Search */
-const Search = styled.div`
-  grid-area: Search;
-  ${height};
-  ${flex};
-`
-
-const SearchIcon = styled.button`
-  background-color: ${Theme.colors.neutral.lg};
-  height: 100%;
-  width: 40px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  ${flex};
-`
-
-const InputSearch = styled.input`
-  height: 100%;
-  width: 100%;
+const Search = styled.input`
   background-color: ${Theme.colors.neutral.lg};
   color: ${Theme.colors.neutral.xs};
-  padding: 8px 14px 8px 0;
-  border-radius: 0 4px 4px 0;
+  grid-area: Search;
+  padding: 8px 14px;
+  ${borderRadius};
   border: none;
-  outline: none;
+  ${height};
 
   @media (max-width: ${Theme.bk.lg}) {
     padding: 20px 14px;
@@ -185,16 +161,17 @@ const UserButton = styled.button`
 
 const UserIcon = styled.img`
   height: 32px;
+
 `
 
 const ArrowDropdownIcon = styled.img``
 
-
 export const Header = () => {
-  const [isOpenned, setIsOpenned] = useState(false)
+  let navigate = useNavigate()
 
   const handleChange = (value) => {
-    setIsOpenned(value)
+    navigate(`${value}`)
+    value = ''
   }
 
   return (
@@ -205,36 +182,25 @@ export const Header = () => {
 
       <LinkHome to={routes[0].path}>{routes[0].title}</LinkHome>
 
-      <DropDown onMouseEnter={() => handleChange(true)} onMouseLeave={() => handleChange(false)}>
-        <ButtonDropDown>
-          Categorias
-          <IconDropDown src={arrowDropdown} alt='Icone de seta pra baixo' />
-        </ButtonDropDown>
+      <MenuMobile>oiiiii</MenuMobile>
 
-        <ListDropDown isOpenned={isOpenned} >
-          {
-            routes
-              .filter(route => route.path !== '/')
-              .map((route => (
-                <ItemListDropDown key={route.path}>
-                  <LinkDropDown to={route.path}>{route.title}</LinkDropDown>
-                </ItemListDropDown>
-              )))
-          }
-        </ListDropDown>
-      </DropDown>
-
+      <SelectMenu onChange={e => handleChange(e.target.value)}>
+        <OptionMenu disabled selected hidden>Categorias</OptionMenu>
+        {
+          routes
+            .filter(route => route.path !== '/')
+            .map((route => (
+              <OptionMenu key={route.path} value={route.path}>
+                {route.title}
+              </OptionMenu>
+            )))
+        }
+      </SelectMenu>
 
       <Vazio />
 
       <NewMovieButton> Adicionar filme</NewMovieButton>
-
-      <Search>
-        <SearchIcon>
-          <img src={search} alt='' />
-        </SearchIcon>
-        <InputSearch placeholder='Pesquisar' />
-      </Search>
+      <Search placeholder='Pesquisar' />
 
       <UserButton>
         <UserIcon src={user} alt='' />

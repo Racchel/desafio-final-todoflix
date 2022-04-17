@@ -6,7 +6,7 @@ import { Theme } from '../../../themes'
 /** style */
 import { height } from '../style'
 
-export const UserButton = styled.button`
+export const Container = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -20,6 +20,6 @@ export const UserButton = styled.button`
   }
 `
 
-export const UserIcon = styled.img`
+export const Icon = styled.img`
   height: 32px;
 `

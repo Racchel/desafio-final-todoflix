@@ -22,7 +22,16 @@ export const Container = styled.nav`
   }
 `
 
-export const ListDropDown = styled.ul`
+export const Button = styled.button`
+  color: ${Theme.colors.neutral.xs};
+  background-color: transparent;
+  border: none;
+  ${flex};
+`
+
+export const Icon = styled.img``
+
+export const List = styled.ul`
   display: ${props => props.isOpenned ? 'block' : 'none'};
   position: absolute;
   width: 150px;
@@ -32,7 +41,7 @@ export const ListDropDown = styled.ul`
   background-color: ${Theme.colors.neutral.xl};
 `
 
-export const ItemListDropDown = styled.li`
+export const ItemList = styled.li`
   flex-direction: column;
   padding: 3px;
 
@@ -46,11 +55,3 @@ export const LinkDropDown = styled(Link)`
   font-size: ${Theme.font.size.xs};
 `
 
-export const ButtonDropDown = styled.button`
-  color: ${Theme.colors.neutral.xs};
-  background-color: transparent;
-  border: none;
-  ${flex};
-`
-
-export const IconDropDown = styled.img``

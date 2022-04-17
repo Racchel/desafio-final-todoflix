@@ -6,13 +6,13 @@ import { Theme } from '../../../themes'
 /** style */
 import { flex, height } from '../style'
 
-export const SearchContainer = styled.div`
+export const Container = styled.div`
   grid-area: Search;
   ${height};
   ${flex};
 `
 
-export const SearchIcon = styled.button`
+export const Icon = styled.button`
   background-color: ${Theme.colors.neutral.lg};
   height: 100%;
   width: 40px;
@@ -21,7 +21,7 @@ export const SearchIcon = styled.button`
   ${flex};
 `
 
-export const SearchInput = styled.input`
+export const Input = styled.input`
   height: 100%;
   width: 100%;
   background-color: ${Theme.colors.neutral.lg};

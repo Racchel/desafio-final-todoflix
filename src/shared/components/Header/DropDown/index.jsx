@@ -1,9 +1,9 @@
 import {
   Container,
-  ButtonDropDown,
-  IconDropDown,
-  ListDropDown,
-  ItemListDropDown,
+  Button,
+  Icon,
+  List,
+  ItemList,
   LinkDropDown
 } from './style'
 
@@ -14,22 +14,22 @@ import arrowDropdown from '../../../assets/icons/arrow-dropdown.svg'
 export const DropDown = ({ routes, handleChange, isOpenned }) => {
   return (
     <Container onMouseEnter={() => handleChange(true)} onMouseLeave={() => handleChange(false)}>
-      <ButtonDropDown>
+      <Button>
         Categorias
-        <IconDropDown src={arrowDropdown} alt='Icone de seta pra baixo' />
-      </ButtonDropDown>
+        <Icon src={arrowDropdown} alt='Icone de seta pra baixo' />
+      </Button>
 
-      <ListDropDown isOpenned={isOpenned} >
+      <List isOpenned={isOpenned} >
         {
           routes
             .filter(route => route.path !== '/')
             .map((route => (
-              <ItemListDropDown key={route.path}>
+              <ItemList key={route.path}>
                 <LinkDropDown to={route.path}>{route.title}</LinkDropDown>
-              </ItemListDropDown>
+              </ItemList>
             )))
         }
-      </ListDropDown>
+      </List>
     </Container>
   )
 }

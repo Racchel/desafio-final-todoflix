@@ -1,10 +1,10 @@
-import { Logo } from './Logo'
-import { Search } from './Search'
-import { User } from './User'
-import { DropDown } from './DropDown'
 import { NewMovieButton } from './NewMovieButton'
 import { LinkHome } from './LinkHome'
+import { DropDown } from './DropDown'
+import { Search } from './Search'
+import { Logo } from './Logo'
+import { User } from './User'
 
 export {
-  Logo, Search, User, DropDown, NewMovieButton, LinkHome
+  NewMovieButton, LinkHome, DropDown, Search, Logo, User
 }

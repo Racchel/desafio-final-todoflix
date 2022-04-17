@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 /** layouts */
-import { BaseLayout } from '../shared/layouts'
+import { BaseLayout } from '@shared/layouts'
 
 /** services */
-import { MoviesService } from '../shared/services/movies'
+import { MoviesService } from '@shared/services/movies'
 
 /** utils */
 

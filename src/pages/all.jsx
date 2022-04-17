@@ -1,7 +1,7 @@
 import React from 'react'
 
 /** layouts */
-import { BaseLayout } from '../shared/layouts'
+import { BaseLayout } from '@shared/layouts'
 
 /** services */
 

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 /** layouts */
-import { BaseLayout } from '../shared/layouts'
+import { BaseLayout } from '@shared/layouts'
+
+/** components */
+import { FeaturedMovie } from '@shared/components'
 
 /** services */
-import { MoviesService } from '../shared/services/movies'
+import { MoviesService } from '@shared/services/movies'
 
 /** utils */
 
@@ -22,11 +25,13 @@ export const Home = () => {
   }, [])
 
   return (
-    <BaseLayout title='Página inicial'>
+    <BaseLayout>
+      <FeaturedMovie />
       <ul>
         {
           movies.map(movie => (
-            <li key={movie.id}>{movie.title}</li>
+            // <li key={movie.id}>{movie.title}</li>
+            <li key={movie.id}></li>
           ))
         }
       </ul>

@@ -15,7 +15,6 @@ export const Container = styled.header`
   grid-template-columns: 0.7fr 0.5fr 0.5fr 2fr 0.9fr 3fr 0.3fr;
   grid-template-rows: auto;
   margin: 5px 0;
-  padding: 0 54px;
   width: 100%;
   height: 74px;
   display: grid;
@@ -28,9 +27,6 @@ export const Container = styled.header`
     grid-template-rows: auto auto;
   }
 
-  @media (max-width: ${Theme.bk.sm}) {
-    padding: 0 10px;
-  }
 `
 
 /** Vazio */

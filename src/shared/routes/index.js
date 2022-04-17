@@ -1,5 +1,5 @@
 /** pages */
-import { Home } from '../../pages'
+import { Home, All } from '../../pages'
 
 /** routes */
 export const routes = [
@@ -12,7 +12,7 @@ export const routes = [
   {
     title: 'Todos',
     path: '/movies/all',
-    element: <p>Todos os filmes</p>
+    element: <All />
   },
   {
     title: 'Favoritos',

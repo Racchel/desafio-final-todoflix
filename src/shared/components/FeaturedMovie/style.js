@@ -9,7 +9,7 @@ const icon = '20px'
 export const Container = styled.div`
   display: flex;
   align-items: start;
-  margin: 80px 0 0 0;
+  margin: 80px 0 100px 0;
 
   @media (max-width: ${Theme.bk.lg}) {
     flex-direction: column;

@@ -1,3 +1,7 @@
 export * from './Header'
 export * from './FeaturedMovie'
 export * from './CarouselMovies'
+export * from './Arrow'
+export * from './IconHeart'
+export * from './IconLike'
+export * from './CardMovie'

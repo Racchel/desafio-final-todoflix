@@ -6,11 +6,9 @@ import { BaseLayout } from '@shared/layouts'
 /** components */
 import { FeaturedMovie, CarouselMovies } from '@shared/components'
 
-
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
-/** utils */
 
 export class Home extends Component {
 
@@ -18,22 +16,16 @@ export class Home extends Component {
     listMovies: []
   }
 
-  componentDidMount() {
-    this.getMovies()
-  }
+  componentDidMount = () => this.getMovies()
 
   getMovies = async () => {
     const movies = await MoviesService.getAll()
-
-    this.setState({
-      listMovies: movies
-    })
-
+    this.setState({ listMovies: movies })
   }
 
   render() {
     return (
-      <BaseLayout title='Página inicial'>
+      <BaseLayout>
         <FeaturedMovie />
         <CarouselMovies />
       </BaseLayout>

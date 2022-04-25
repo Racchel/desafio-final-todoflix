@@ -1,43 +1,47 @@
-// import { useEffect, useState } from 'react'
+import { Component } from 'react'
 import Carousel from 'nuka-carousel'
-import { useEffect, useState } from 'react'
-import styled from 'styled-components'
 
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
-const Img = styled.img`
-  width: 240px;
-`
+/** style */
+import { Img } from './style'
 
-export const CarouselMovies = () => {
+export class CarouselMovies extends Component {
 
-  const [movies, setMovies] = useState([])
+  state = {
+    movies: []
+  }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await MoviesService.getAll()
-      setMovies(data)
-      console.log(movies)
-    }
-    fetchData()
+  fetchData = async () => {
+    const data = await MoviesService.getAll()
+
+    this.setState({
+      movies: data
+    })
+  }
+
+  componentDidMount() {
+    this.fetchData()
       .catch(console.error)
-  }, [])
+  }
 
-  return (
-    <Carousel
-      autoplay={true}
-      autoplayInterval={2000}
-      wrapAround={true}
-      slidesToShow={5}
-    >
-      {
-        movies.map(movie => (
-          <Img key={movie.id} src={movie.image} />
-        ))
-      }
+  render() {
+    return (
+      <Carousel
+        autoplay={true}
+        autoplayInterval={2000}
+        wrapAround={true}
+        slidesToShow={5}
+      >
+        {
+          this.state.movies.map(movie => (
+            <Img key={movie.id} src={movie.image} />
+          ))
+        }
 
 
-    </Carousel>
-  )
+      </Carousel>
+    )
+  }
 }

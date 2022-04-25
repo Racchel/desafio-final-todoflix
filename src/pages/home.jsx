@@ -3,6 +3,10 @@ import React, { Component } from 'react'
 /** layouts */
 import { BaseLayout } from '@shared/layouts'
 
+/** components */
+import { FeaturedMovie, CarouselMovies } from '@shared/components'
+
+
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
@@ -30,14 +34,8 @@ export class Home extends Component {
   render() {
     return (
       <BaseLayout title='Página inicial'>
-
-        <ul>
-          {
-            this.state.listMovies.map(movie => (
-              <li key={movie.id}>{movie.title}</li>
-            ))
-          }
-        </ul>
+        <FeaturedMovie />
+        <CarouselMovies />
       </BaseLayout>
     )
   }

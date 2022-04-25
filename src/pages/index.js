@@ -1,2 +1,2 @@
-export * from './home_function'
+export * from './home'
 export * from './all'

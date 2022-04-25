@@ -16,7 +16,7 @@ const getAll = async () => {
   }
 }
 
-const getById = async ({ id: id }) => {
+const getById = async ({ id }) => {
   try {
     const { data } = await API.get(`/movies/${id}`)
 
@@ -44,7 +44,7 @@ const create = async ({ data: movie }) => {
   }
 }
 
-const updateById = async ({ id: id, data: movie }) => {
+const updateById = async ({ id, data: movie }) => {
   try {
     await API.put(`/movies/${id}`, movie)
 
@@ -56,16 +56,16 @@ const updateById = async ({ id: id, data: movie }) => {
 }
 
 /** alterna para true/false -> filme foi favoritado? */
-const toggleFavorite = async ({ id: id }) => { return id }
+const toggleFavorite = async ({ id }) => { return id }
 
 /** alterna para true/false -> filme foi assistido? */
-const toggleWatched = async ({ id: id }) => { return id }
+const toggleWatched = async ({ id }) => { return id }
 
 /** alterna para true/false -> filme foi adicionado? */
-const toggleAdded = async ({ id: id }) => { return id }
+const toggleAdded = async ({ id }) => { return id }
 
 
-const deleteById = async ({ id: id }) => {
+const deleteById = async ({ id }) => {
   try {
     await API.delete(`/movies/${id}`)
 

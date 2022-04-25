@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Component } from 'react'
 
 /** imgs */
 import { routes } from '../../routes'
@@ -10,30 +10,39 @@ import { Container, Vazio } from './style'
 import { Logo, Search, User, DropDown, NewMovieButton, LinkHome } from './components'
 
 
-export const Header = () => {
-  const [isOpenned, setIsOpenned] = useState(false)
+export class Header extends Component {
 
-  const handleChange = (value) => {
-    setIsOpenned(value)
+  state = {
+    isOpenned: false
   }
-  return (
-    <Container>
 
-      <Logo route={routes[0]} />
-      <LinkHome route={routes[0]} />
+  handleChange = (value) => {
+    this.setState({
+      isOpenned: value
+    })
+  }
 
-      <DropDown
-        handleChange={handleChange}
-        isOpenned={isOpenned}
-        routes={routes}
-      />
+  render() {
 
-      <Vazio />
+    return (
+      <Container>
 
-      <NewMovieButton />
-      <Search />
-      <User />
+        <Logo route={routes[0]} />
+        <LinkHome route={routes[0]} />
 
-    </Container>
-  )
+        <DropDown
+          handleChange={this.handleChange}
+          isOpenned={this.state.isOpenned}
+          routes={routes}
+        />
+
+        <Vazio />
+
+        <NewMovieButton />
+        <Search />
+        <User />
+
+      </Container >
+    )
+  }
 }

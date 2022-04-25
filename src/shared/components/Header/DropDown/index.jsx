@@ -11,7 +11,12 @@ import {
 import arrowDropdown from '../../../assets/icons/arrow-dropdown.svg'
 
 
-export const DropDown = ({ routes, handleChange, isOpenned }) => {
+export const DropDown = ({
+  handleChange,
+  isOpenned,
+  routes
+}) => {
+
   return (
     <Container onMouseEnter={() => handleChange(true)} onMouseLeave={() => handleChange(false)}>
       <Button>
@@ -30,6 +35,6 @@ export const DropDown = ({ routes, handleChange, isOpenned }) => {
             )))
         }
       </List>
-    </Container>
+    </Container >
   )
 }

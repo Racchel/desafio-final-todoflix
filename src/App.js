@@ -13,15 +13,18 @@ import { Component } from 'react'
 
 export class App extends Component {
   state = {
-    searchValue: ''
+    searchValue: '',
+    moviesFiltered: []
   }
   setSearchValue = (value) => this.setState({ searchValue: value })
+  setMoviesFiltered = (value) => this.setState({ moviesFiltered: value })
 
   render() {
     return (
       <AppContext.Provider value={{
         state: this.state,
-        setSearchValue: this.setSearchValue
+        setSearchValue: this.setSearchValue,
+        setMoviesFiltered: this.setMoviesFiltered
       }}>
         <BrowserRouter>
           <Theme.GlobalStyle />

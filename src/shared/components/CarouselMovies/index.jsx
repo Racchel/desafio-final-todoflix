@@ -7,7 +7,7 @@ import Carousel from 'nuka-carousel'
 import { MoviesService } from '@shared/services/movies'
 
 /** components */
-import { CardMovie } from '..'
+import { CardMovie } from '@shared/components'
 
 /** config */
 import { carouselConfig } from './config'

@@ -7,7 +7,7 @@ import { AppContext } from '@shared/contexts'
 import { Header } from '../components'
 
 /** style */
-import { Container } from './style'
+import { ContainerBaseLayout } from './style'
 
 /** layouts */
 import { SearchLayout } from './SearchLayout'
@@ -22,21 +22,20 @@ const DefaultLayout = ({ children, title }) => {
   )
 }
 
-
 export class BaseLayout extends Component {
   render() {
     return (
       <AppContext.Consumer>
         {
           context => (
-            <Container >
+            <ContainerBaseLayout >
               <Header />
               {
                 context.state.searchValue
                   ? <SearchLayout />
                   : <DefaultLayout children={this.props.children} title={this.props.title} />
               }
-            </Container >
+            </ContainerBaseLayout >
 
           )
         }

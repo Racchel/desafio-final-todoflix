@@ -30,7 +30,7 @@ export class CarouselMovies extends Component {
   render() {
     return (
       <Carousel {...carouselConfig}>
-        {this.state.movies.map(movie => <CardMovie movie={movie} />)}
+        {this.state.movies.map(movie => <CardMovie key={movie.id} movie={movie} />)}
       </Carousel>
     )
   }

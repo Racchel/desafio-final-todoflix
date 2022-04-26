@@ -1,2 +1,5 @@
 export * from './home'
-export * from './all'
+export * from './allMovies'
+export * from './favoriteMovies'
+export * from './addedMovies'
+export * from './watchedMovies'

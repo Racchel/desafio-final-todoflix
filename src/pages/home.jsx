@@ -9,7 +9,6 @@ import { FeaturedMovie, CarouselMovies } from '@shared/components'
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
-
 export class Home extends Component {
 
   state = {
@@ -26,9 +25,11 @@ export class Home extends Component {
   render() {
     return (
       <BaseLayout>
+        <p>{this.state.value}</p>
         <FeaturedMovie />
         <CarouselMovies />
       </BaseLayout>
+
     )
   }
 }

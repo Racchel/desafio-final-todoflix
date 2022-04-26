@@ -1,5 +1,5 @@
 /** pages */
-import { Home, All } from '../../pages'
+import { Home, AllMovies, FavoriteMovies, AddedMovies, WatchedMovies } from '../../pages'
 
 /** routes */
 export const routes = [
@@ -12,21 +12,25 @@ export const routes = [
   {
     title: 'Todos',
     path: '/movies/all',
-    element: <All />
+    element: <AllMovies />,
+    filter: 'all'
   },
   {
     title: 'Favoritos',
     path: '/movies/favorites',
-    element: <p>Filmes favoritos</p>
+    element: <FavoriteMovies />,
+    filter: 'isFavorite'
   },
   {
     title: 'Já vistos',
     path: '/movies/watched',
-    element: <p>Filmes asssistidos</p>
+    element: <WatchedMovies />,
+    filter: 'isWatched'
   },
   {
     title: 'Adicionados',
     path: '/movies/added',
-    element: <p>Filmes adicionados</p>
+    element: <AddedMovies />,
+    filter: 'isAdded'
   }
 ]

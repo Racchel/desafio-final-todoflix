@@ -1,34 +1,47 @@
-import styled from 'styled-components'
+import { Component } from 'react'
+
+/** contexts */
+import { AppContext } from '@shared/contexts'
 
 /** components */
 import { Header } from '../components'
-import { Theme } from '../themes'
 
-/** theme */
+/** style */
+import { Container } from './style'
 
-/** styled */
-const Container = styled.div`
-  width: 100%;
-  min-height: 90vh;
-  padding: 0 54px;
+/** layouts */
+import { SearchLayout } from './SearchLayout'
 
-  @media (max-width: ${Theme.bk.sm}) {
-    padding: 0 20px;
-  }
-`
 
-const BaseLayout = ({ title, children }) => {
+const DefaultLayout = ({ children, title }) => {
   return (
-    <Container>
-      <Header />
-      {
-        title && (
-          <h1>{title}</h1>
-        )
-      }
+    <>
+      {title && <h1>{title}</h1>}
       {children}
-    </Container>
+    </>
   )
 }
 
-export { BaseLayout }
+
+export class BaseLayout extends Component {
+  render() {
+    return (
+      <AppContext.Consumer>
+        {
+          context => (
+            <Container >
+              <Header />
+              {
+                context.state.searchValue
+                  ? <SearchLayout />
+                  : <DefaultLayout children={this.props.children} title={this.props.title} />
+              }
+            </Container >
+
+          )
+        }
+      </AppContext.Consumer>
+    )
+  }
+}
+

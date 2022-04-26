@@ -6,28 +6,35 @@ import { Theme } from '../../../themes'
 /** style */
 import { flex, height } from '../style'
 
+const br = '4px'
+
 export const Container = styled.div`
+  border-radius: ${br};
   grid-area: Search;
   ${height};
   ${flex};
+
+  :hover {
+    box-shadow: ${Theme.colors.shadow};
+  }
 `
 
 export const Icon = styled.button`
   background-color: ${Theme.colors.neutral.lg};
+  border-radius: ${br} 0 0 ${br};
   height: 100%;
   width: 40px;
   border: none;
-  border-radius: 4px 0 0 4px;
   ${flex};
 `
 
 export const Input = styled.input`
-  height: 100%;
-  width: 100%;
   background-color: ${Theme.colors.neutral.lg};
   color: ${Theme.colors.neutral.xs};
+  border-radius: 0 ${br} ${br} 0;
   padding: 8px 14px 8px 0;
-  border-radius: 0 4px 4px 0;
+  height: 100%;
+  width: 100%;
   border: none;
   outline: none;
 

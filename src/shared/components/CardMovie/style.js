@@ -6,10 +6,9 @@ import { Theme } from '../../themes'
 export const Card = styled.div`
   flex-direction: column;
   border-radius: 5px;
-  position: relative;
+  position: relative; 
   cursor: pointer;
   display: flex;
-  height: 240px;
   padding: 5px;
 
   :hover {
@@ -17,10 +16,22 @@ export const Card = styled.div`
   }
 `
 
-export const Img = styled.img`
-  border-radius: 5px;
-  height: 150px;
+export const Img = styled.div`
   width: 100%;
+  height: 150px;
+  background: ${props => `url(${props.src})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: ${Theme.bk.lg}) {
+    height: 200px;
+  }
+
+  @media (max-width: ${Theme.bk.sm}) {
+    height: 300px;
+    margin-bottom: 10px;
+  }
 `
 
 export const Header = styled.div`
@@ -34,12 +45,16 @@ export const Title = styled.h2`
   font-size: ${Theme.font.size.md};
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 0 5px 0 0 ;
   overflow: hidden;
+  padding: 0 5px 0 0 ;
 `
 
 export const Description = styled.p`
   font-size: ${Theme.font.size.xs};
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 export const Rate = styled.div`

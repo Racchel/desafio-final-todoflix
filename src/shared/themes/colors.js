@@ -12,6 +12,7 @@ export const colors = {
     v1: '#E71B27',
     v2: '#E08D1B',
     v3: '#6CBE61'
-  }
+  },
+  shadow: 'rgba(255, 255, 255, 0.6) 0px 0px 0px 1px'
 }
 

@@ -9,13 +9,13 @@ import { flex, height } from '../style'
 
 export const Container = styled.nav`
   color: ${Theme.colors.neutral.xs};
+  flex-direction: column;
   grid-area: LinkMenu;
+  position: relative;
   display: block;
   border: none;
   ${height};
   ${flex};
-  flex-direction: column;
-  position: relative;
   
   @media (max-width: ${Theme.bk.lg}) {
     align-items: start;
@@ -33,16 +33,15 @@ export const Icon = styled.img``
 
 export const List = styled.ul`
   display: ${props => props.isOpenned ? 'block' : 'none'};
+  background-color: ${Theme.colors.neutral.xl};
   position: absolute;
+  padding: 10px 0;
   width: 150px;
   top: 30px;
   left: 0;
-  padding: 10px 0;
-  background-color: ${Theme.colors.neutral.xl};
 `
 
 export const ItemList = styled.li`
-  flex-direction: column;
   padding: 3px;
 
   :hover {
@@ -53,5 +52,6 @@ export const ItemList = styled.li`
 export const LinkDropDown = styled(Link)`
   color: ${Theme.colors.neutral.xs};
   font-size: ${Theme.font.size.xs};
+  display: flex;
 `
 

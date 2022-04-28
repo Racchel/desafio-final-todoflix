@@ -3,17 +3,16 @@ import { Component } from 'react'
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
-/** images */
-import iconLike from '@shared/assets/icons/like.svg'
-import iconHeart from '@shared/assets/icons/heart.svg'
+import { IconHeart, IconLike } from '@shared/components'
+
+/** theme */
+import { Theme } from '../../themes'
 
 /** style */
 import {
   Container,
   Content,
   Description,
-  IconHeart,
-  IconLike,
   Image,
   Likes,
   Rate,
@@ -45,13 +44,13 @@ export class FeaturedMovie extends Component {
       <Container>
         <Image src={this.state.movie.image} alt='' />
         <Content>
-          <IconHeart src={iconHeart} alt='' />
+          <IconHeart isFavorite={this.state.movie.isFavorite} />
           <Tag>Visto recentemente</Tag>
           <Title>{this.state.movie.title}</Title>
           <Description>{this.state.movie.description}</Description>
           <Rate>
             <Likes>{this.state.movie.likes}/5</Likes>
-            <IconLike src={iconLike} alt='' />
+            <IconLike size={20} like={this.state.movie.likes} />
           </Rate>
         </Content>
       </Container>

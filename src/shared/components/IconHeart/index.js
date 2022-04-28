@@ -1,18 +1,56 @@
+import { Component } from 'react'
+
+/** contexts */
+import { AppContext } from '@shared/contexts'
+
 /** style */
 import { Container } from './style'
 
-export const IconHeart = () => {
+/** react-icons */
+import { AiFillHeart } from 'react-icons/ai'
 
-  return (
-    <Container
-      mlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 21 22'
-      width='21'
-      height='22'
-    >
-      <ellipse id='Ellipse_8' data-name='Ellipse 8' cx='10.5' cy='11' rx='10.5' ry='11' fill='#717171' />
-      <path id='Path_407' data-name='Path 407' d='M865.16-1403.7l-.893-.813c-3.172-2.877-5.266-4.774-5.266-7.1a3.355,3.355,0,0,1,3.388-3.388,3.689,3.689,0,0,1,2.772,1.287,3.689,3.689,0,0,1,2.772-1.287,3.355,3.355,0,0,1,3.388,3.388c0,2.328-2.094,4.225-5.267,7.108Z' transform='translate(-854.5 1421)' fill='#b1b1b1' />
-    </Container>
-  )
+/** services */
+import { MoviesService } from '@shared/services/movies'
 
+
+export class IconHeart extends Component {
+
+  state = {
+    movies: []
+  }
+
+  handleClick = async () => {
+    const movie = await MoviesService.getById({ id: this.props.id })
+
+    const movieUpdated = {
+      ...movie,
+      isFavorite: !this.props.isFavorite
+    }
+
+    await MoviesService.updateById({ id: this.props.id, data: movieUpdated })
+
+    // const movies = await MoviesService.getAll()
+    // this.setState({ movies: movies })
+  }
+
+  render() {
+    return (
+      <AppContext.Consumer>
+        {
+          context => (
+            <Container
+              position={this.props.position}
+              isFavorite={this.props.isFavorite}
+              onClick={() => {
+                this.handleClick()
+              }}
+            >
+
+              <AiFillHeart size={15} />
+            </Container>
+          )
+        }
+      </AppContext.Consumer>
+    )
+  }
 }

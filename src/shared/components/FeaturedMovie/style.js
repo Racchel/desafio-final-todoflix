@@ -68,13 +68,7 @@ export const Rate = styled.div`
   position: relative;
   height: 20px;
 `
-export const IconLike = styled.img`
-  width:  ${icon};
-  position: absolute;
-  top: 45%;
-  left: 30px;
-  transform: translateY(-50%) ;
-`
+
 export const Likes = styled.p`
   padding: 0 5px 0 0;
   font-size: ${Theme.font.size.md};

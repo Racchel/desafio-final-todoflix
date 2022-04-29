@@ -20,17 +20,11 @@ export class IconHeart extends Component {
   }
 
   handleClick = async () => {
-    const movie = await MoviesService.getById({ id: this.props.id })
 
-    const movieUpdated = {
-      ...movie,
-      isFavorite: !this.props.isFavorite
-    }
+  }
 
-    await MoviesService.updateById({ id: this.props.id, data: movieUpdated })
+  componentDidUpdate = () => {
 
-    // const movies = await MoviesService.getAll()
-    // this.setState({ movies: movies })
   }
 
   render() {

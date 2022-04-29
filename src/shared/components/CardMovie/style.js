@@ -7,6 +7,7 @@ export const Card = styled.div`
   flex-direction: column;
   border-radius: 5px;
   position: relative; 
+  transition: 1.5s;
   cursor: pointer;
   display: flex;
   padding: 5px;

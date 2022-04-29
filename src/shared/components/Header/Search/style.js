@@ -11,6 +11,7 @@ const br = '4px'
 export const Container = styled.div`
   border-radius: ${br};
   grid-area: Search;
+  transition: 0.5s;
   ${height};
   ${flex};
 

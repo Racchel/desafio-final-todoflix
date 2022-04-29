@@ -10,6 +10,7 @@ export const Button = styled.button`
   background-color: ${Theme.colors.primary};
   color: ${Theme.colors.neutral.xs};
   grid-area: NewMovieButton;
+  transition: 0.5s;
   cursor: pointer;
   ${borderRadius}
   border: none;

@@ -9,8 +9,9 @@ export const Container = styled.div`
   color: ${({ isFavorite }) => isFavorite ? Theme.colors.neutral.xs : Theme.colors.neutral.sm};
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
   display: flex;
   height: 25px;
   width: 25px;

@@ -16,15 +16,21 @@ export class App extends Component {
     searchValue: '',
     detailModalIsOpen: false,
     detailModalData: undefined,
-    moviesFiltered: [],
+    createMovieModalIsOpen: false,
+    createMovieModalData: undefined,
     moviesCarousel: []
   }
+
+  /** set value state */
   setSearchValue = (value) => this.setState({ searchValue: value })
   setMoviesFiltered = (value) => this.setState({ moviesFiltered: value })
   setMoviesCarousel = (value) => this.setState({ moviesCarousel: value })
   setDetailModalData = (value) => this.setState({ detailModalData: value })
+  setCreateMovieModalData = (value) => this.setState({ createMovieModalData: value })
 
+  /** toggle value */
   toggleDetailModalIsOpen = () => this.setState({ detailModalIsOpen: !this.state.detailModalIsOpen })
+  toggleCreateMovieModalIsOpen = () => this.setState({ createMovieModalIsOpen: !this.state.createMovieModalIsOpen })
 
   render() {
     return (
@@ -33,8 +39,11 @@ export class App extends Component {
         setSearchValue: this.setSearchValue,
         setMoviesFiltered: this.setMoviesFiltered,
         setMoviesCarousel: this.setMoviesCarousel,
+        setDetailModalData: this.setDetailModalData,
+        setCreateMovieModalData: this.setCreateMovieModalData,
+
         toggleDetailModalIsOpen: this.toggleDetailModalIsOpen,
-        setDetailModalData: this.setDetailModalData
+        toggleCreateMovieModalIsOpen: this.toggleCreateMovieModalIsOpen
       }}>
         <BrowserRouter>
           <Theme.GlobalStyle />

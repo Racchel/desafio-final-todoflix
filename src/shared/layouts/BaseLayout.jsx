@@ -4,7 +4,7 @@ import { Component } from 'react'
 import { AppContext } from '@shared/contexts'
 
 /** components */
-import { Header, DetailModal } from '@shared/components'
+import { Header, DetailModal, CreateMovieModal } from '@shared/components'
 
 /** style */
 import { ContainerBaseLayout } from './style'
@@ -38,6 +38,12 @@ export class BaseLayout extends Component {
               {
                 context.state.detailModalIsOpen && (
                   <DetailModal context={context} />
+                )
+              }
+
+              {
+                context.state.createMovieModalIsOpen && (
+                  <CreateMovieModal context={context} />
                 )
               }
             </ContainerBaseLayout >

@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../../themes'
+import { Theme } from '@shared/themes'
 
 /** style */
-import { height } from '../style'
+import { height } from '../styleHeader'
 
 export const Container = styled.button`
   background-color: transparent;

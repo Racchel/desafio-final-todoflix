@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../themes'
+import { Theme } from '@shared/themes'
 
 /** styled */
 const icon = '20px'

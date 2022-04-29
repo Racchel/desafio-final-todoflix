@@ -1,10 +1,10 @@
 import { Component } from 'react'
 
 /** imgs */
-import { routes } from '../../routes'
+import { routes } from '@shared/routes'
 
 /** style */
-import { Container, Vazio } from './style'
+import { Container, Vazio } from './styleHeader'
 
 /** components */
 import { Logo, Search, User, DropDown, NewMovieButton, LinkHome } from './components'

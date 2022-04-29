@@ -5,7 +5,7 @@ import { Card, Img, Header, Description, Title, Likes, Rate } from './style'
 import { AppContext } from '@shared/contexts'
 
 /** components */
-import { IconHeart, IconLike } from '..'
+import { IconHeart, IconLike } from '@shared/components'
 
 export const CardMovie = ({ movie }) => {
   return (

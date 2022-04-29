@@ -5,7 +5,7 @@ import { Container } from './style'
 import { AiFillLike } from 'react-icons/ai';
 
 /** theme */
-import { Theme } from '../../themes'
+import { Theme } from '@shared/themes'
 
 export const IconLike = ({ size, like }) => {
 

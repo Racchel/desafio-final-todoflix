@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../../themes'
+import { Theme } from '@shared/themes'
 
 /** style */
-import { height, borderRadius } from '../style'
+import { height, borderRadius } from '../styleHeader'
 
 export const Button = styled.button`
   background-color: ${Theme.colors.primary};

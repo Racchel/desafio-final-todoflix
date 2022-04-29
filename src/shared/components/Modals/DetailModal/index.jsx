@@ -5,7 +5,7 @@ import ReactStars from 'react-rating-stars-component'
 import { IconDetails, IconHeart } from '@shared/components'
 
 /** config */
-import { info } from './config'
+import { info } from '../config'
 
 /** style */
 import {

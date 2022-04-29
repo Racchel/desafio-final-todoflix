@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../themes'
+import { Theme } from '@shared/themes'
 
 export const Card = styled.div`
   flex-direction: column;

@@ -3,10 +3,8 @@ import { Component } from 'react'
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
+/** components */
 import { IconHeart, IconLike } from '@shared/components'
-
-/** theme */
-import { Theme } from '../../themes'
 
 /** style */
 import {

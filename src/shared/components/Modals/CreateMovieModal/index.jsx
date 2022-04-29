@@ -2,7 +2,7 @@
 import ReactStars from 'react-rating-stars-component'
 
 /** config */
-import { info } from './config'
+import { info } from '../config'
 
 /** style */
 import {

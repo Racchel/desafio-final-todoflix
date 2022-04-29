@@ -8,7 +8,7 @@ import {
 } from './style'
 
 /** imgs */
-import arrowDropdown from '../../../assets/icons/arrow-dropdown.svg'
+import arrowDropdown from '@shared/assets/icons/arrow-dropdown.svg'
 
 
 export const DropDown = ({

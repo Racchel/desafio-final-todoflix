@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../themes'
+import { Theme } from '@shared/themes'
 
 export const Container = styled.svg`
   transform: ${({ position }) => position === 'right' ? ' rotate(180deg);' : ''};

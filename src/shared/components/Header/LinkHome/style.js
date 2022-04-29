@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 /** theme */
-import { Theme } from '../../../themes'
+import { Theme } from '@shared/themes'
 
 /** style */
-import { flex } from '../style'
+import { flex } from '../styleHeader'
 
 export const Home = styled(Link)`
   color: ${Theme.colors.neutral.xs};

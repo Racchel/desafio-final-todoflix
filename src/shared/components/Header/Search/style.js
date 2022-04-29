@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 /** theme */
-import { Theme } from '../../../themes'
+import { Theme } from '@shared/themes'
 
 /** style */
-import { flex, height } from '../style'
+import { flex, height } from '../styleHeader'
 
 const br = '4px'
 

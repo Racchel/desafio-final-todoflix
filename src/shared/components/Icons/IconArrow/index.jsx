@@ -1,7 +1,7 @@
 /** style */
 import { Container } from './style'
 
-export const Arrow = ({ functionSlide, position }) => {
+export const IconArrow = ({ functionSlide, position }) => {
 
   return (
     <Container

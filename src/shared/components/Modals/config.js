@@ -2,7 +2,7 @@
 import { BsStar, BsStarHalf, BsStarFill } from 'react-icons/bs';
 
 /** theme */
-import { Theme } from '../../themes'
+import { Theme } from '@shared/themes'
 
 export const info = {
   value: 1,

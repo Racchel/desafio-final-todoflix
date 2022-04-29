@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 /** theme */
-import { Theme } from '../../../themes'
+import { Theme } from '@shared/themes'
 
 /** style */
-import { flex, height } from '../style'
+import { flex, height } from '../styleHeader'
 
 export const Container = styled.nav`
   color: ${Theme.colors.neutral.xs};

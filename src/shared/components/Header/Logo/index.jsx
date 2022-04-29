@@ -1,7 +1,7 @@
 import { LinkLogo, Img } from './style'
 
 /** imgs */
-import logo from '../../../assets/logo.png'
+import logo from '@shared/assets/logo.png'
 
 export const Logo = ({ route }) => {
   return (

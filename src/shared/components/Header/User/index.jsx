@@ -1,6 +1,6 @@
 /** imgs */
-import user from '../../../assets/icons/user.svg'
-import arrowDropdown from '../../../assets/icons/arrow-dropdown.svg'
+import user from '@shared/assets/icons/user.svg'
+import arrowDropdown from '@shared/assets/icons/arrow-dropdown.svg'
 
 /** style */
 import { Container, Icon } from './style'

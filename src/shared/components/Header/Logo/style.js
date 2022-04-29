@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 /** style */
-import { flex } from '../style'
+import { flex } from '../styleHeader'
 
 export const LinkLogo = styled(Link)`
   grid-area: LinkLogo;

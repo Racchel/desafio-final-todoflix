@@ -3,14 +3,15 @@ import { Component } from 'react'
 /** contexts */
 import { AppContext } from '@shared/contexts'
 
+/** layouts */
+import { SearchLayout } from '@shared/layouts'
+
 /** components */
 import { Header, DetailModal, CreateMovieModal } from '@shared/components'
 
 /** style */
 import { ContainerBaseLayout } from './style'
 
-/** layouts */
-import { SearchLayout } from './SearchLayout'
 
 const DefaultLayout = ({ children, title }) => {
   return (
@@ -21,35 +22,30 @@ const DefaultLayout = ({ children, title }) => {
   )
 }
 
+
 export class BaseLayout extends Component {
   render() {
+    const { children, title } = this.props
+
     return (
       <AppContext.Consumer>
-        {
-          context => (
-            <ContainerBaseLayout >
-              <Header />
-              {
-                context.state.searchValue
-                  ? <SearchLayout />
-                  : <DefaultLayout children={this.props.children} title={this.props.title} />
-              }
+        {context => (
+          <ContainerBaseLayout >
+            <Header />
+            {context.state.searchValue
+              ? <SearchLayout />
+              : <DefaultLayout children={children} title={title} />
+            }
 
-              {
-                context.state.detailModalIsOpen && (
-                  <DetailModal context={context} />
-                )
-              }
+            {context.state.detailModalIsOpen && (
+              <DetailModal context={context} />
+            )}
 
-              {
-                context.state.createMovieModalIsOpen && (
-                  <CreateMovieModal context={context} />
-                )
-              }
-            </ContainerBaseLayout >
-
-          )
-        }
+            {context.state.createMovieModalIsOpen && (
+              <CreateMovieModal context={context} />
+            )}
+          </ContainerBaseLayout >
+        )}
       </AppContext.Consumer>
     )
   }

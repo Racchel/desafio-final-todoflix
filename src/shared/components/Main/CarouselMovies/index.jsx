@@ -1,20 +1,19 @@
 import { Component } from 'react'
 
-/** libs */
-import Carousel from 'nuka-carousel'
-
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
 /** components */
 import { CardMovie } from '@shared/components'
 
+/** libs */
+import Carousel from 'nuka-carousel'
+
 /** config */
 import { carouselConfig } from './config'
 
 
 export class CarouselMovies extends Component {
-
   state = {
     movies: []
   }

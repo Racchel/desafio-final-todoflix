@@ -1,12 +1,13 @@
+/** styled */
 import styled from 'styled-components'
 
 /** theme */
 import { Theme } from '@shared/themes'
 
 export const Container = styled.div`
+  color: ${({ isFavorite }) => isFavorite ? Theme.colors.neutral.xs : Theme.colors.neutral.sm};
   position: ${({ position }) => position ? position : ''};
   background-color: ${Theme.colors.neutral.md};
-  color: ${({ isFavorite }) => isFavorite ? Theme.colors.neutral.xs : Theme.colors.neutral.sm};
   justify-content: center;
   align-items: center;
   border-radius: 50%;

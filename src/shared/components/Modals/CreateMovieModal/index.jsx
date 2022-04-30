@@ -28,9 +28,7 @@ import {
 } from './style'
 
 
-
 export class CreateMovieModal extends Component {
-
   state = {
     title: '',
     description: '',
@@ -43,9 +41,7 @@ export class CreateMovieModal extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state)
-    const respo = await MoviesService.create({ data: this.state })
-    console.log(respo)
+    await MoviesService.create({ data: this.state })
 
     this.setState({
       title: '',
@@ -58,10 +54,7 @@ export class CreateMovieModal extends Component {
 
   handleFile = (e) => {
     const [file] = e.target.files
-
-    this.setState({
-      image: URL.createObjectURL(file)
-    })
+    this.setState({ image: URL.createObjectURL(file) })
   }
 
   render() {
@@ -74,7 +67,7 @@ export class CreateMovieModal extends Component {
 
         <Title>Adicionar dados</Title>
 
-        <Form action='' onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <Container>
             <Content>
 
@@ -111,7 +104,7 @@ export class CreateMovieModal extends Component {
 
             <Content>
               <Label>Imagem de capa</Label>
-              <Image src={image} alt='' />
+              <Image src={image} alt={title} />
               <input
                 type='file'
                 accept='image/*'
@@ -119,9 +112,10 @@ export class CreateMovieModal extends Component {
               />
             </Content>
           </Container>
+
           <Footer>
             <ButtonSubmit type='submit' value='Confirmar' />
-            <Button onClick={this.props.context.toggleCreateMovieModalIsOpen}>Cancelar</Button>
+            <Button onClick={toggleCreateMovieModalIsOpen}>Cancelar</Button>
           </Footer>
         </Form>
       </Modal >

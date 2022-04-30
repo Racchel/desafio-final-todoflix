@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 0,
+      "id": "24ca9884-0a76-4cab-b4bc-4eea34800b35",
       "title": "Capitão Fantástico",
       "description": "Nas florestas do estado de Washington, um pai cria seus seis filhos longe da civilização, em uma rígida rotina de aventuras. Ele é forçado a deixar o isolamento e leva sua família para encarar o mundo, desafiando sua ideia do que significa ser pai.",
       "image": "https://www.planoaberto.com.br/wp-content/uploads/2016/10/capft.jpg",
@@ -11,7 +11,7 @@
       "isAdded": false
     },
     {
-      "id": 1,
+      "id": "adafc122-8894-458e-8fd1-230c6188f052",
       "title": "Sherek",
       "description": "Para resgatar uma princesa das garras de um dragão que cospe fogo, o ogro Shrek se une a um companheiro improvável: um burro brincalhão.",
       "image": "https://cdn.falauniversidades.com.br/wp-content/uploads/2021/04/22164821/shrek-1-460x259.jpg",
@@ -21,7 +21,7 @@
       "isAdded": true
     },
     {
-      "id": 2,
+      "id": "6e8d341c-1556-4a63-9f8a-2a10a7f9984a",
       "title": "Hoje eu quero voltar sozinho",
       "description": "Um novo colega de sala transforma a vida do estudante Leonardo, que também é cego, e complica sua amizade com sua melhor amiga.",
       "image": "https://encenasaudemental.com/wp-content/uploads/2016/01/hoje-eu-quero-voltar-sozinho-banner-e1452705882281.jpg",
@@ -31,7 +31,7 @@
       "isAdded": true
     },
     {
-      "id": 3,
+      "id": "3e8b3ec3-95b3-4541-bdfa-830d0348071e",
       "title": "Spider-man",
       "description": "Após ser picado por uma aranha radioativa, o garoto Miles Morales logo aprende a lançar teias com seus parceiros de um universo alternativo.",
       "image": "https://dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2020/04/spider-man-scaled-1280x720.jpg",
@@ -41,7 +41,7 @@
       "isAdded": true
     },
     {
-      "id": 4,
+      "id": "bed84621-b491-4975-8b08-fa513bec10d3",
       "title": "Um sonho de liberdade",
       "description": "Condenado pelo assassinato da esposa e do amante dela, um banqueiro se apega à esperança e à amizade com um detento chamado Red para sobreviver à prisão.",
       "image": "https://cdn.ome.lt/legacy/images/galerias/Um-Sonho-de-Liberdade/Um-Sonho-de-Liberdade-10.jpg",
@@ -51,7 +51,7 @@
       "isAdded": true
     },
     {
-      "id": 5,
+      "id": "fcfa878d-5e42-48dc-b9a5-d686dcaab3b0",
       "title": "Que horas ela volta?",
       "description": "Val é a fiel empregada domestica de uma família rica. Mas a chegada de sua filha gera tensão na casa e faz com que ela comece a questionar esse papel.",
       "image": "https://cosmonerd.com.br//uploads/2020/11/que-horas-ela-volta-filme-dirigido-por-anna-muylaert.jpg",
@@ -61,7 +61,7 @@
       "isAdded": true
     },
     {
-      "id": 6,
+      "id": "4104f2bc-5b35-4928-b008-4cbce3fe109e",
       "title": "A fuga das galinhas",
       "description": "O galo Rocky e a galinha Ginger querem ajudar todas as outras galinhas a fugirem da granja onde vivem em cativeiro.",
       "image": "https://img.ibxk.com.br/2020/06/23/23124436707019.jpg",
@@ -71,7 +71,7 @@
       "isAdded": true
     },
     {
-      "id": 7,
+      "id": "60986862-3c74-4357-8c62-900026fa9a53",
       "title": "AmarElo",
       "description": "Nos bastidores do show no Theatro Municipal de São Paulo, o rapper e ativista Emicida celebra o grande legado da cultura negra brasileira.",
       "image": "https://cultura.uol.com.br/upload/tvcultura/entretenimento/happens_big/20201208133504_emicida.jpg",
@@ -81,7 +81,7 @@
       "isAdded": true
     },
     {
-      "id": 8,
+      "id": "e5801a96-2d45-4bc3-b788-6e67a99e51cd",
       "title": "Rocketman",
       "description": "Em reabilitação, Elton John relembra suas origens humildes, as músicas atemporais e os momentos de inspiração e excesso. Baseado em sua verdadeira história.",
       "image": "https://wp.ufpel.edu.br/empauta/files/2019/06/Rocketman.jpg",

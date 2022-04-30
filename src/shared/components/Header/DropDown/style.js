@@ -1,5 +1,7 @@
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+/** styled */
+import styled from 'styled-components'
 
 /** theme */
 import { Theme } from '@shared/themes'
@@ -28,8 +30,6 @@ export const Button = styled.button`
   border: none;
   ${flex};
 `
-
-export const Icon = styled.img``
 
 export const List = styled.ul`
   display: ${props => props.isOpenned ? 'block' : 'none'};

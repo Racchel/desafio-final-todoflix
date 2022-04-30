@@ -1,5 +1,5 @@
 /** pages */
-import { Home, AllMovies, FavoriteMovies, AddedMovies, WatchedMovies } from '../../pages'
+import { Home, AllMovies, FavoriteMovies, AddedMovies, WatchedMovies } from '@pages'
 
 /** routes */
 export const routes = [

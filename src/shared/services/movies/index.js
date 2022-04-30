@@ -1,10 +1,9 @@
 import { API } from '../axios-config'
+
+/** uudv4 */
 import { v4 as uuidv4 } from 'uuid'
 
-
 const getAll = async () => {
-  console.log('entrei aqui')
-
   try {
     const { data } = await API.get('/movies')
 
@@ -57,7 +56,6 @@ const updateById = async ({ id, data: movie }) => {
   } catch (error) {
     console.error(error)
     return new Error(error.message || 'Error updating movie.')
-
   }
 }
 

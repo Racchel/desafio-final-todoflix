@@ -1,15 +1,17 @@
-/** imgs */
-import user from '@shared/assets/icons/user.svg'
-import arrowDropdown from '@shared/assets/icons/arrow-dropdown.svg'
+/** react-icons*/
+import { RiArrowDownSFill, RiUserLine } from 'react-icons/ri'
 
 /** style */
-import { Container, Icon } from './style'
+import { Container, Content } from './style'
+
 
 export const User = () => {
   return (
     <Container>
-      <Icon src={user} alt='' />
-      <img src={arrowDropdown} alt='' />
+      <Content>
+        <RiUserLine color='white' size={20} />
+      </Content>
+      <RiArrowDownSFill color='white' size={15} />
     </Container>
   )
 } 

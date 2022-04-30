@@ -1,10 +1,10 @@
 import { Component } from 'react'
 
-/** layouts */
-import { BaseLayout } from '@shared/layouts'
-
 /** services */
 import { MoviesService } from '@shared/services/movies'
+
+/** layouts */
+import { BaseLayout } from '@shared/layouts'
 
 /** components */
 import { CardMovie } from '@shared/components'
@@ -43,10 +43,13 @@ export class MoviesLayout extends Component {
   componentDidMount = () => this.fetchData().catch(console.error)
 
   render() {
+    const { title } = this.props
+    const { movies } = this.state
+
     return (
-      <BaseLayout title={this.props.title}>
+      <BaseLayout title={title}>
         <ContainerMoviesLayout>
-          {this.state.movies.map(movie => <CardMovie key={movie.id} movie={movie} />)}
+          {movies.map(movie => <CardMovie key={movie.id} movie={movie} />)}
         </ContainerMoviesLayout>
       </BaseLayout>
     )

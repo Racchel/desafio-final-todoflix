@@ -1,5 +1,7 @@
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+/** styled */
+import styled from 'styled-components'
 
 /** style */
 import { flex } from '../styleHeader'

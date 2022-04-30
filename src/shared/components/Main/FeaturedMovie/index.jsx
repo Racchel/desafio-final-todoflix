@@ -25,33 +25,32 @@ export class FeaturedMovie extends Component {
   }
 
   fetchData = async () => {
-    const data = await MoviesService.getById({ id: 0 })
-
-    this.setState({
-      movie: data
-    })
+    const data = await MoviesService.getById({ id: '24ca9884-0a76-4cab-b4bc-4eea34800b35' })
+    this.setState({ movie: data })
   }
 
-  componentDidMount() {
-    this.fetchData()
-      .catch(console.error)
-  }
+  componentDidMount = () => this.fetchData().catch(console.error)
 
   render() {
+    const { image, isFavorite, title, description, likes } = this.state.movie
+
     return (
       <Container>
-        <Image src={this.state.movie.image} alt='' />
+        <Image src={image} alt={title} />
+
         <Content>
-          <IconHeart isFavorite={this.state.movie.isFavorite} />
+          <IconHeart isFavorite={isFavorite} />
           <Tag>Visto recentemente</Tag>
-          <Title>{this.state.movie.title}</Title>
-          <Description>{this.state.movie.description}</Description>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
           <Rate>
-            <Likes>{this.state.movie.likes}/5</Likes>
-            <IconLike size={20} like={this.state.movie.likes} />
+            <Likes>{likes}/5</Likes>
+            <IconLike size={20} like={likes} />
           </Rate>
         </Content>
+
       </Container>
     )
   }
 }
+

@@ -11,7 +11,7 @@ export const font = {
   },
   weight: {
     sm: '400',
-    lg: '500'
+    lg: '600'
   },
   line_height: {
     xs: '14px',

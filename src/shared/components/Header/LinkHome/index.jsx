@@ -1,4 +1,6 @@
+/** style */
 import { Home } from './style'
+
 
 export const LinkHome = ({ route }) => {
   return (

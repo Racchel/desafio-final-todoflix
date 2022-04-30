@@ -1,3 +1,4 @@
+/** styled */
 import styled from 'styled-components'
 
 /** theme */
@@ -18,12 +19,12 @@ export const Card = styled.div`
 `
 
 export const Img = styled.div`
-  width: 100%;
-  height: 150px;
   background: ${props => `url(${props.src})`};
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 100%;
 
   @media (max-width: ${Theme.bk.lg}) {
     height: 200px;
@@ -46,15 +47,15 @@ export const Title = styled.h2`
   font-size: ${Theme.font.size.md};
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
   padding: 0 5px 0 0 ;
+  overflow: hidden;
 `
 
 export const Description = styled.p`
   font-size: ${Theme.font.size.xs};
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
   overflow: hidden;
 `
 

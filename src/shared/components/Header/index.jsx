@@ -1,29 +1,32 @@
 import { Component } from 'react'
 
-/** imgs */
+/** routes */
 import { routes } from '@shared/routes'
+
+/** components */
+import {
+  NewMovieButton,
+  DropDown,
+  LinkHome,
+  Search,
+  Logo,
+  User
+} from './components'
 
 /** style */
 import { Container, Vazio } from './styleHeader'
 
-/** components */
-import { Logo, Search, User, DropDown, NewMovieButton, LinkHome } from './components'
-
 
 export class Header extends Component {
-
   state = {
     isOpenned: false
   }
 
   handleChange = (value) => {
-    this.setState({
-      isOpenned: value
-    })
+    this.setState({ isOpenned: value })
   }
 
   render() {
-
     return (
       <Container>
 

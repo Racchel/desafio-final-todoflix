@@ -1,16 +1,17 @@
 import { Component } from 'react'
 
-/** contexts */
-import { AppContext } from '@shared/contexts'
-
 /** services */
 import { MoviesService } from '@shared/services/movies'
 
-/** imgs */
-import search from '../../../assets/icons/search.svg'
+/** contexts */
+import { AppContext } from '@shared/contexts'
+
+/** react-icons*/
+import { AiOutlineSearch } from 'react-icons/ai'
 
 /** style */
 import { Container, Icon, Input } from './style'
+
 
 export class Search extends Component {
   state = {
@@ -34,27 +35,26 @@ export class Search extends Component {
   componentDidMount = () => this.fetchData().catch(console.error)
 
   render() {
+    const { searchValue, moviesFiltered } = this.state
+
     return (
       <AppContext.Consumer>
-        {
-          context => (
-            <Container >
-              <Icon>
-                <img src={search} alt='' />
-              </Icon>
-              <Input
-                value={this.state.searchValue}
-                placeholder='Pesquisar'
-                onChange={(e) => {
-                  this.handleChange(e)
-                  context.setSearchValue(e.target.value)
-                  context.setMoviesFiltered(this.state.moviesFiltered)
-                }}
-              />
-            </Container>
-          )
-
-        }
+        {context => (
+          <Container >
+            <Icon>
+              <AiOutlineSearch color='white' size={20} />
+            </Icon>
+            <Input
+              value={searchValue}
+              placeholder='Pesquisar'
+              onChange={(e) => {
+                this.handleChange(e)
+                context.setSearchValue(e.target.value)
+                context.setMoviesFiltered(moviesFiltered)
+              }}
+            />
+          </Container>
+        )}
       </AppContext.Consumer>
     )
   }

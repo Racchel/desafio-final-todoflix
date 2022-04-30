@@ -1,8 +1,9 @@
+/** routes */
+import { routes } from '@shared/routes'
+
 /** layouts */
 import { MoviesLayout } from '@shared/layouts'
 
-/** routes */
-import { routes } from '@shared/routes'
 
 export const AllMovies = () => {
   return (

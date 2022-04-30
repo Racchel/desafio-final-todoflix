@@ -1,15 +1,14 @@
+/** styled */
 import styled from 'styled-components'
 
 /** theme */
 import { Theme } from '@shared/themes'
 
 /** style */
-import { flex, height } from '../styleHeader'
-
-const br = '4px'
+import { flex, height, borderRadius } from '../styleHeader'
 
 export const Container = styled.div`
-  border-radius: ${br};
+  border-radius: ${borderRadius};
   grid-area: Search;
   transition: 0.5s;
   ${height};
@@ -22,7 +21,7 @@ export const Container = styled.div`
 
 export const Icon = styled.button`
   background-color: ${Theme.colors.neutral.lg};
-  border-radius: ${br} 0 0 ${br};
+  border-radius: ${borderRadius} 0 0 ${borderRadius};
   height: 100%;
   width: 40px;
   border: none;
@@ -32,12 +31,12 @@ export const Icon = styled.button`
 export const Input = styled.input`
   background-color: ${Theme.colors.neutral.lg};
   color: ${Theme.colors.neutral.xs};
-  border-radius: 0 ${br} ${br} 0;
+  border-radius: 0 ${borderRadius} ${borderRadius} 0;
   padding: 8px 14px 8px 0;
+  outline: none;
+  border: none;
   height: 100%;
   width: 100%;
-  border: none;
-  outline: none;
 
   @media (max-width: ${Theme.bk.lg}) {
     padding: 20px 14px;

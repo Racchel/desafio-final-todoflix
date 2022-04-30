@@ -1,3 +1,4 @@
+/** styled */
 import styled from 'styled-components'
 
 /** theme */
@@ -13,6 +14,7 @@ export const Container = styled.div`
   display: flex;
   height: 25px;
   width: 25px;
+  
   :hover {
     color:${Theme.colors.neutral.xs};
   }

@@ -1,4 +1,6 @@
 import { API } from '../axios-config'
+import { v4 as uuidv4 } from 'uuid'
+
 
 const getAll = async () => {
   console.log('entrei aqui')
@@ -32,7 +34,11 @@ const getById = async ({ id }) => {
 
 const create = async ({ data: movie }) => {
   try {
-    const { data } = await API.post('/movies', movie)
+    const id = uuidv4()
+
+    const newMovie = { id, ...movie }
+
+    const { data } = await API.post('/movies', newMovie)
 
     if (data) return movie
 
